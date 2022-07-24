@@ -276,20 +276,4 @@ class Scene2 extends Phaser.Scene {
         }
    }
 
-
-   //RestartGame Function
-   restartGame(){
-        gameOverText.enableBody(true, gameOverText.x, gameOverText.y, true, true);
-        if (cursors.down.isDown || keys.S.isDown)
-        {
-             gameOver = false;
-             this.updateScore(-1*score);
-             this.numLargeAsteroids -= numLargeAsteroids;
-             this.restartSound.play();
-             this.music.stop();
-             this.scene.restart();         
-        }
-   }
-
-
 }
