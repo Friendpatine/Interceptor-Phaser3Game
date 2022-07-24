@@ -222,6 +222,7 @@ class Scene2 extends Phaser.Scene {
         }
         else{
             //Initiate GameOver Text and Restart Game Controls
+            this.boosterSound.pause();
             gameOverText.enableBody(true, gameOverText.x, gameOverText.y, true, true);
             if (cursors.down.isDown || keys.S.isDown)
             {
